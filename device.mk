@@ -423,12 +423,12 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/google/pixel/pixelstats \
     hardware/google/pixel/power-libperfmgr \
-    hardware/lineage/interfaces/power-libperfmgr \
+    hardware/voltage/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client \
     hardware/xiaomi \
     vendor/qcom/opensource/usb/etc \
-    hardware/nxp/keymint/pixel \
-    hardware/nxp/weaver/pixel \
+    hardware/nxp/keymint/generic \
+    hardware/nxp/weaver/generic \
 
 # Sensors
 PRODUCT_PACKAGES += \

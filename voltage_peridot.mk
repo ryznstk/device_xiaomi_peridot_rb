@@ -9,16 +9,28 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 
 # Inherit from peridot device
 $(call inherit-product, device/xiaomi/peridot/device.mk)
 
-PRODUCT_NAME := lineage_peridot
+PRODUCT_NAME := voltage_peridot
 PRODUCT_DEVICE := peridot
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := 24069PC21G
+
+# Flags
+TARGET_DISABLE_EPPE := true
+TARGET_OPTIMIZED_DEXOPT := true
+TARGET_HAS_UDFPS := true
+EXTRA_UDFPS_ANIMATIONS := true
+TARGET_SUPPORTED_REFRESH_RATES := 60,90,120
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_ENABLE_BLUR := true
+SURFACE_FLINGER_BOOST := true
 
 PRODUCT_SYSTEM_NAME := peridot_global
 PRODUCT_SYSTEM_DEVICE := peridot

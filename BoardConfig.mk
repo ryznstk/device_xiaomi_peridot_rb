@@ -293,4 +293,8 @@ include vendor/xiaomi/peridot/BoardConfigVendor.mk
 
 # Vendor MiuiCamera
 -include device/xiaomi/peridot-miuicamera/BoardConfig.mk
+
 SELINUX_IGNORE_NEVERALLOWS := true
+
+# NotGameTurbo
+include packages/apps/NotGameTurbo/BoardConfig.mk

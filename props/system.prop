@@ -1,3 +1,12 @@
+ro.mist.display=1220 x 2712, 120 hz
+ro.mist.battery=5000mah
+ro.mist.soc=Snapdragon® 8S Gen 3
+ro.mist.camera=50MP + 8MP 
+ro.mist.front=20MP
+ro.mist.platform=SM8635
+ro.mist.screen=6.67' CrystalRes Flow AMOLED
+ro.mist.device.name=Poco F6
+
 # Device
 ro.product.mod_device=peridot_global
 

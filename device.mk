@@ -427,8 +427,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom-caf/common/libqti-perfd-client \
     hardware/xiaomi \
     vendor/qcom/opensource/usb/etc \
-    hardware/nxp/keymint/generic \
-    hardware/nxp/weaver/generic \
+    hardware/nxp/keymint/pixel \
+    hardware/nxp/weaver/pixel \
 
 # Sensors
 PRODUCT_PACKAGES += \

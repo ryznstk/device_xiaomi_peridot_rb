@@ -59,6 +59,11 @@ git clone https://github.com/ryznstk/packages_apps_TouchServices.git -b lineage-
 #git cherry-pick a139ef86c1d00470092b3160e204dd247416eec5
 #croot
 
+cd build/soong
+git fetch https://github.com/ryznstk/android_build_soong cnb
+git reset --hard FETCH_HEAD
+croot
+
 rm -rf packages/apps/NotGameTurbo
 
 rm -rf vendor/lineage-priv

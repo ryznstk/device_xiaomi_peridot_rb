@@ -65,7 +65,7 @@ git reset --hard FETCH_HEAD
 croot
 
 rm -rf packages/apps/NotGameTurbo
-https://github.com/ryznstk/android_packages_apps_NotGameTurbo.git packages/apps/NotGameTurbo
+git clone https://github.com/ryznstk/android_packages_apps_NotGameTurbo.git packages/apps/NotGameTurbo
 
 rm -rf vendor/lineage-priv
 

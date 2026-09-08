@@ -19,12 +19,12 @@ git clone -b lineage-23.2 --depth 1 https://github.com/LineageOS/android_kernel_
 # Hardware xiaomi (fresh clone)
 echo "Cloning hardware xiaomi source..."
 rm -rf hardware/xiaomi
-git clone -b lineage-23.2 https://github.com/ryznstk/hardware_xiaomi_los.git hardware/xiaomi
+git clone -b lineage-24.0 https://github.com/ryznstk/hardware_xiaomi_los.git hardware/xiaomi
 
 # MiuiCamera device tree (fresh clone)
 echo "Cloning MiuiCamera device tree..."
 rm -rf device/xiaomi/peridot-miuicamera
-git clone https://github.com/ryznstk/android_device_xiaomi_peridot-miuicamera.git device/xiaomi/peridot-miuicamera
+git clone -b 17 https://github.com/ryznstk/android_device_xiaomi_peridot-miuicamera.git device/xiaomi/peridot-miuicamera
 
 # MiuiCamera vendor tree (fresh clone)
 echo "Cloning MiuiCamera vendor tree..."
@@ -35,11 +35,6 @@ git clone https://gitlab.com/blu96/proprietary_vendor_xiaomi_peridot-miuicamera.
 echo "Cloning Gamebar tree..."
 rm -rf packages/apps/GameBar
 git clone https://github.com/ryznstk/packages_apps_GameBar.git packages/apps/GameBar
-
-# KProfiles (fresh clone)
-echo "Cloning KProfiles..."
-rm -rf packages/apps/KProfiles
-git clone https://github.com/ryznstk/packages_apps_KProfiles.git packages/apps/KProfiles
 
 rm -rf packages/apps/XiaomiParts
 
@@ -55,22 +50,16 @@ git clone https://github.com/ryznstk/packages_apps_TouchServices.git -b lineage-
 #git cherry-pick a139ef86c1d00470092b3160e204dd247416eec5
 #croot
 
-cd build/soong
-git fetch https://github.com/ryznstk/android_build_soong cnb
-git reset --hard FETCH_HEAD
-croot
-
 rm -rf packages/apps/NotGameTurbo
-
-rm -rf vendor/lineage-priv
+git clone https://github.com/ryznstk/android_packages_apps_NotGameTurbo.git packages/apps/NotGameTurbo
 
 # Refresh signing keys
-if [ -d vendor/evolution-priv/keys ]; then
+if [ -d vendor/lineage-priv/keys ]; then
   echo "Removing existing signing keys..."
-  rm -rf vendor/evolution-priv/keys
+  rm -rf vendor/lineage-priv/keys
 fi
 echo "Cloningfresh signing keys..."
-git clone https://github.com/ryznstk/keys.git vendor/evolution-priv/keys
+git clone https://github.com/ryznstk/keys.git vendor/lineage-priv/keys
 
 # Always back to root at the end
 if command -v croot &>/dev/null; then

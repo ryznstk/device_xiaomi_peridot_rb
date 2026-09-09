@@ -59,7 +59,7 @@ rm -rf packages/apps/NotGameTurbo
 git clone https://github.com/ryznstk/android_packages_apps_NotGameTurbo.git packages/apps/NotGameTurbo
 
 rm -rf vendor/custom
-git clone https://github.com/ryznstk/key_priv.git vendor/custom
+git clone https://gitlab.com/blu96/key_priv.git vendor/custom
 
 cd system/sepolicy
 git fetch https://github.com/ryznstk/shinkai_system_sepolicy heptakaideka

@@ -58,8 +58,8 @@ git clone https://github.com/ryznstk/packages_apps_KProfiles.git packages/apps/K
 rm -rf packages/apps/NotGameTurbo
 git clone https://github.com/ryznstk/android_packages_apps_NotGameTurbo.git packages/apps/NotGameTurbo
 
-rm -rf vendor/shinkai
-git clone https://github.com/ryznstk/key_priv.git vendor/shinkai
+rm -rf vendor/custom
+git clone https://github.com/ryznstk/key_priv.git vendor/custom
 
 cd system/sepolicy
 git fetch https://github.com/ryznstk/shinkai_system_sepolicy heptakaideka

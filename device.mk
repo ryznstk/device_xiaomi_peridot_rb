@@ -23,9 +23,6 @@ $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk
 $(call soong_config_set,rfs,mpss_firmware_symlink_target,modem_firmware)
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
-# TouchServices
-$(call inherit-product, packages/apps/TouchServices/touchservice.mk)
-
 # GameBar Performance Overlay
 $(call inherit-product, packages/apps/GameBar/gamebar.mk) 
 
@@ -294,10 +291,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
-
-# KProfiles
-PRODUCT_PACKAGES += \
-    KProfiles
 
 # Keylayout
 PRODUCT_COPY_FILES += \
@@ -573,6 +566,3 @@ $(call inherit-product, vendor/xiaomi/peridot/peridot-vendor.mk)
 
 # Vendor MiuiCamera
 $(call inherit-product-if-exists, device/xiaomi/peridot-miuicamera/device.mk)
-
-# NotGameTurbo
-$(call inherit-product, packages/apps/NotGameTurbo/notgameturbo.mk)

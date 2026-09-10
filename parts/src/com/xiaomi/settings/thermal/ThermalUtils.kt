@@ -28,7 +28,7 @@ private constructor(
     private val sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context)
     private val serviceIntent = Intent(context, ThermalService::class.java)
 
-    var enabled: Boolean = sharedPrefs.getBoolean(THERMAL_ENABLED, true)
+    var enabled: Boolean = sharedPrefs.getBoolean(THERMAL_ENABLED, false)
         set(value) {
             if (field == value) return
             field = value

@@ -14,7 +14,7 @@ public class ChargingControlActivity extends CollapsingToolbarBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportFragmentManager().beginTransaction()
+        getFragmentManager().beginTransaction()
             .replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame, 
                      new ChargingControlFragment())
             .commit();

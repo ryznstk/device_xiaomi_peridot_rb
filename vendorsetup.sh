@@ -37,26 +37,19 @@ rm -rf packages/apps/GameBar
 git clone https://github.com/ryznstk/packages_apps_GameBar.git packages/apps/GameBar
 
 rm -rf packages/apps/XiaomiParts
+git clone -b lineage-24.0 https://github.com/ryznstk/XiaomiParts packages/apps/XiaomiParts
 
 # ViperFX
 rm -rf packages/apps/ViPER4AndroidFX
 git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX
 
-rm -rf packages/apps/TouchServices
-git clone https://github.com/ryznstk/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
+#rm -rf packages/apps/TouchServices
+#git clone https://github.com/ryznstk/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
 
 #cd vendor/lineage
 #git fetch https://github.com/CipherOS/android_vendor_cipher seventeen
 #git cherry-pick a139ef86c1d00470092b3160e204dd247416eec5
 #croot
-
-# KProfiles (fresh clone)
-echo "Cloning KProfiles..."
-rm -rf packages/apps/KProfiles
-git clone https://github.com/ryznstk/packages_apps_KProfiles.git packages/apps/KProfiles
-
-rm -rf packages/apps/NotGameTurbo
-git clone https://github.com/ryznstk/android_packages_apps_NotGameTurbo.git packages/apps/NotGameTurbo
 
 rm -rf vendor/custom
 git clone https://gitlab.com/blu96/key_priv.git vendor/custom

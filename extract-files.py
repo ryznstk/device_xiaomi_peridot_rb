@@ -38,6 +38,7 @@ namespace_imports = [
     'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/qcom/opensource/dataservices',
     'vendor/qcom/opensource/display',
+    'packages/apps/XiaomiParts'
 ]
 
 def blob_fixup_graphic_buffer_size(

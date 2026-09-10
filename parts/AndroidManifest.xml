@@ -38,10 +38,5 @@
             android:permission="ColorModeService">
         </service>
 
-        <service
-            android:name=".battery.ChargingLimitService"
-            android:permission="ChargingLimitService">
-        </service>
-
     </application>
 </manifest>

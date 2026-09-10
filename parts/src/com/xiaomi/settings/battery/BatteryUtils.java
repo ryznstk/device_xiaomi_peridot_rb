@@ -21,20 +21,18 @@ public class BatteryUtils {
     public static void setChargingSuspend(boolean suspend) {
         File file = new File(NODE_SUSPEND);
         if (!file.exists()) return;
+
         String value = suspend ? "1" : "0";
+
         try (FileOutputStream fos = new FileOutputStream(file)) {
             fos.write(value.getBytes(StandardCharsets.UTF_8));
             fos.flush();
             try {
                 fos.getFD().sync();
             } catch (IOException ignored) {}
-            Log.d(TAG, "Successfully wrote " + value + " to " + NODE_SUSPEND);
+            Log.d(TAG, "Successfully set " + NODE_SUSPEND + " to " + value);
         } catch (IOException e) {
             Log.e(TAG, "Failed to write to " + NODE_SUSPEND, e);
         }
-    }
-
-    public static void setChargingSuspendAsync(boolean suspend) {
-        new Thread(() -> setChargingSuspend(suspend)).start();
     }
 }

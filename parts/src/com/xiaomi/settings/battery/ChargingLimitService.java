@@ -17,6 +17,7 @@ import android.content.SharedPreferences;
 import androidx.preference.PreferenceManager;
 
 public class ChargingLimitService extends Service {
+
     private boolean mReceiverRegistered = false;
 
     private final BroadcastReceiver mBatteryReceiver = new BroadcastReceiver() {
@@ -31,40 +32,39 @@ public class ChargingLimitService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         IntentFilter filter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
-        Intent batteryStatus = getApplicationContext().registerReceiver(null, filter);
-        updateChargingState(this, batteryStatus);
-
         if (!mReceiverRegistered) {
-            getApplicationContext().registerReceiver(mBatteryReceiver, filter);
+            registerReceiver(mBatteryReceiver, filter);
             mReceiverRegistered = true;
         }
+
+        Intent stickyIntent = registerReceiver(null, filter);
+        if (stickyIntent != null) {
+            updateChargingState(this, stickyIntent);
+        }
+        
         return START_STICKY;
     }
 
     private void updateChargingState(Context context, Intent intent) {
-        if (intent == null) return;
-
         Context storageContext = context.createDeviceProtectedStorageContext();
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(storageContext);
         
         boolean isEnabled = prefs.getBoolean(BatteryUtils.PREF_CHARGING_CTRL, false);
         if (!isEnabled) {
-            BatteryUtils.setChargingSuspendAsync(false);
+            BatteryUtils.setChargingSuspend(false);
             return;
         }
 
         int limit = prefs.getInt(BatteryUtils.PREF_CHARGING_LIMIT, 80);
         int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
-        
-        if (level != -1) {
-            BatteryUtils.setChargingSuspendAsync(level >= limit);
-        }
+
+        BatteryUtils.setChargingSuspend(level >= limit);
     }
 
     @Override
     public void onDestroy() {
         if (mReceiverRegistered) {
-            getApplicationContext().unregisterReceiver(mBatteryReceiver);
+            unregisterReceiver(mBatteryReceiver);
             mReceiverRegistered = false;
         }
         super.onDestroy();

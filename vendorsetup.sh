@@ -16,6 +16,10 @@ git clone -b lineage-23.2 --depth 1 https://github.com/ryznstk/xiaomi_sm8635-mod
 rm -rf kernel/xiaomi/sm8635-devicetrees
 git clone -b lineage-23.2 --depth 1 https://github.com/ryznstk/xiaomi_sm8635-devicetrees.git kernel/xiaomi/sm8635-devicetrees
 
+cd kernel/xiaomi/sm8635
+curl https://raw.githubusercontent.com/maxsteeel/nomount/refs/heads/dev/kernel/setup.sh | bash -
+croot
+
 # Hardware xiaomi (fresh clone)
 echo "Cloning hardware xiaomi source..."
 rm -rf hardware/xiaomi

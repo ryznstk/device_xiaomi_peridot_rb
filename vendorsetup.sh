@@ -62,8 +62,12 @@ git clone https://github.com/ryznstk/packages_apps_KProfiles.git packages/apps/K
 #croot
 
 cd build/soong
-git fetch https://github.com/ryznstk/android_build_soong cnb
+git fetch https://github.com/ryznstk/inf_build_soong 17
 git reset --hard FETCH_HEAD
+croot
+
+cd system/sepolicy
+git fetch https://github.com/ryznstk/inf_system_sepolicy 17
 croot
 
 rm -rf packages/apps/NotGameTurbo

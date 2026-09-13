@@ -69,15 +69,15 @@ croot
 rm -rf packages/apps/NotGameTurbo
 git clone https://github.com/ryznstk/android_packages_apps_NotGameTurbo.git packages/apps/NotGameTurbo
 
-rm -rf vendor/lineage-priv
+rm -rf vendor/evolution-priv
 
 # Refresh signing keys
-if [ -d vendor/evolution-priv/keys ]; then
+if [ -d vendor/lineage-priv/keys ]; then
   echo "Removing existing signing keys..."
-  rm -rf vendor/evolution-priv/keys
+  rm -rf vendor/lineage-priv/keys
 fi
 echo "Cloningfresh signing keys..."
-git clone -b main https://github.com/ryznstk/keys.git vendor/evolution-priv/keys
+git clone -b line https://github.com/ryznstk/keys.git vendor/lineage-priv/keys
 
 # Always back to root at the end
 if command -v croot &>/dev/null; then

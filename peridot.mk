@@ -14,7 +14,7 @@ $(call inherit-product, vendor/custom/config/common_full_phone.mk)
 # Inherit from peridot device
 $(call inherit-product, device/xiaomi/peridot/device.mk)
 
-PRODUCT_NAME := shinkai_peridot
+PRODUCT_NAME := custom_peridot
 PRODUCT_DEVICE := peridot
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO

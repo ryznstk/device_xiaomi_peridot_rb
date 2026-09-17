@@ -8,21 +8,21 @@ git clone -b rb https://github.com/ryznstk/proprietary_vendor_xiaomi_peridot.git
 # Kernel source (fresh clone)
 echo "Cloning kernel source tree..."
 rm -rf kernel/xiaomi/sm8635
-git clone --depth 1 -b lineage-24.0 https://gitlab.com/blu96/xiaomi_sm8635_devrb.git kernel/xiaomi/sm8635
+git clone --depth 1 https://github.com/ryznstk/android_kernel_xiaomi_sm8635.git kernel/xiaomi/sm8635
 
 rm -rf kernel/xiaomi/sm8635-modules
-git clone -b lineage-23.2 --depth 1 https://github.com/ryznstk/xiaomi_sm8635-modules.git kernel/xiaomi/sm8635-modules
+git clone -b lineage-23.2 --depth 1 https://github.com/LineageOS/android_kernel_xiaomi_sm8635-modules.git kernel/xiaomi/sm8635-modules
 
 rm -rf kernel/xiaomi/sm8635-devicetrees
-git clone -b lineage-23.2 --depth 1 https://github.com/ryznstk/xiaomi_sm8635-devicetrees.git kernel/xiaomi/sm8635-devicetrees
+git clone -b lineage-23.2 --depth 1 https://github.com/LineageOS/android_kernel_xiaomi_sm8635-devicetrees.git kernel/xiaomi/sm8635-devicetrees
 
-cd kernel/xiaomi/sm8635
-curl https://raw.githubusercontent.com/maxsteeel/nomount/refs/heads/dev/kernel/setup.sh | bash -
-croot
+#cd kernel/xiaomi/sm8635
+#curl https://raw.githubusercontent.com/maxsteeel/nomount/refs/heads/dev/kernel/setup.sh | bash -
+#croot
 
-cd kernel/xiaomi/sm8635
-curl -LSs "https://raw.githubusercontent.com/ReSukiSU/ReSukiSU/main/kernel/setup.sh" | bash
-croot
+#cd kernel/xiaomi/sm8635
+#curl -LSs "https://raw.githubusercontent.com/ReSukiSU/ReSukiSU/main/kernel/setup.sh" | bash
+#croot
 
 # Hardware xiaomi (fresh clone)
 echo "Cloning hardware xiaomi source..."
@@ -53,18 +53,18 @@ git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages
 rm -rf packages/apps/TouchServices
 git clone https://github.com/ryznstk/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
 
-rm -rf packages/apps/KProfiles
-git clone https://github.com/AxionAOSP-devices/android_packages_apps_KProfiles.git packages/apps/KProfiles
+#rm -rf packages/apps/KProfiles
+#git clone https://github.com/AxionAOSP-devices/android_packages_apps_KProfiles.git packages/apps/KProfiles
 
 #cd vendor/lineage
 #git fetch https://github.com/CipherOS/android_vendor_cipher seventeen
 #git cherry-pick a139ef86c1d00470092b3160e204dd247416eec5
 #croot
 
-cd build/soong
-git fetch https://github.com/ryznstk/android_build_soong cnb
-git reset --hard FETCH_HEAD
-croot
+#cd build/soong
+#git fetch https://github.com/ryznstk/android_build_soong cnb
+#git reset --hard FETCH_HEAD
+#croot
 
 rm -rf packages/apps/NotGameTurbo
 git clone https://github.com/ryznstk/android_packages_apps_NotGameTurbo.git packages/apps/NotGameTurbo

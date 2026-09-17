@@ -6,5 +6,12 @@
             <name>IDms</name>
             <instance>default</instance>
         </interface>
+    <hal format="aidl" optional="true">
+        <name>vendor.qti.hardware.qconfig</name>
+        <version>5</version>
+        <interface>
+            <name>IQConfig</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 </compatibility-matrix>

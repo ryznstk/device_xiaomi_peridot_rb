@@ -11,7 +11,7 @@ echo "Cloning kernel source tree..."
 #git clone --depth 1 -b lineage-24.0 https://gitlab.com/blu96/xiaomi_sm8635_devrb.git kernel/xiaomi/sm8635
 
 #rm -rf kernel/xiaomi/sm8635-modules
-git clone -b lineage-23.2 --depth 1 https://github.com/ryznstk/xiaomi_sm8635-modules.git kernel/xiaomi/sm8635-modules
+#git clone -b lineage-23.2 --depth 1 https://github.com/ryznstk/xiaomi_sm8635-modules.git kernel/xiaomi/sm8635-modules
 
 #rm -rf kernel/xiaomi/sm8635-devicetrees
 #git clone -b lineage-23.2 --depth 1 https://github.com/ryznstk/xiaomi_sm8635-devicetrees.git kernel/xiaomi/sm8635-devicetrees

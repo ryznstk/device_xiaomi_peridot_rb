@@ -43,10 +43,10 @@ git clone -b lineage-24.0 https://github.com/ryznstk/XiaomiParts packages/apps/X
 rm -rf packages/apps/ViPER4AndroidFX
 git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX
 
-#cd vendor/lineage
-#git fetch https://github.com/CipherOS/android_vendor_cipher seventeen
-#git cherry-pick a139ef86c1d00470092b3160e204dd247416eec5
-#croot
+cd vendor/lineage
+git fetch https://github.com/CipherOS/android_vendor_cipher seventeen
+git cherry-pick a139ef86c1d00470092b3160e204dd247416eec5
+croot
 
 # Refresh signing keys
 if [ -d vendor/lineage-priv/keys ]; then

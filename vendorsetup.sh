@@ -69,7 +69,7 @@ if [ -d vendor/voltage-priv/keys ]; then
   rm -rf vendor/voltage-priv/keys
 fi
 echo "Cloningfresh signing keys..."
-git clone -b main https://github.com/ryznstk/keys.git vendor/voltage-priv/keys
+git clone -b vos https://github.com/ryznstk/keys.git vendor/voltage-priv/keys
 
 # Always back to root at the end
 if command -v croot &>/dev/null; then

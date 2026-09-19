@@ -30,7 +30,7 @@ $(call inherit-product, packages/apps/TouchServices/touchservice.mk)
 $(call inherit-product, packages/apps/GameBar/gamebar.mk) 
 
 # Lineage-Priv
--include vendor/evolution-priv/keys/keys.mk
+-include vendor/voltage-priv/keys/keys.mk
 
 # Call the MiuiCamera setup
 $(call inherit-product-if-exists, device/xiaomi/peridot-miuicamera/device.mk)
@@ -423,7 +423,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/google/pixel/pixelstats \
     hardware/google/pixel/power-libperfmgr \
-    hardware/lineage/interfaces/power-libperfmgr \
+    hardware/voltage/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client \
     hardware/xiaomi \
     vendor/qcom/opensource/usb/etc \

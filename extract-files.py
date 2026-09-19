@@ -33,7 +33,7 @@ namespace_imports = [
     'hardware/google/interfaces',
     'hardware/google/pixel/pixelstats',
     'hardware/google/pixel/power-libperfmgr',
-    'hardware/lineage/interfaces/power-libperfmgr',
+    'hardware/voltage/interfaces/power-libperfmgr',
     'vendor/qcom/opensource/commonsys/display',
     'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/qcom/opensource/dataservices',

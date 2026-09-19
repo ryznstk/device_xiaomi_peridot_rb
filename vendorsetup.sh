@@ -8,21 +8,13 @@ git clone -b rb https://github.com/ryznstk/proprietary_vendor_xiaomi_peridot.git
 # Kernel source (fresh clone)
 echo "Cloning kernel source tree..."
 rm -rf kernel/xiaomi/sm8635
-git clone --depth 1 -b lineage-24.0 https://github.com/ryznstk/xiaomi_sm8635_devs.git kernel/xiaomi/sm8635
+git clone --depth 1 https://github.com/ryznstk/android_kernel_xiaomi_sm8635.git kernel/xiaomi/sm8635
 
 rm -rf kernel/xiaomi/sm8635-modules
-git clone -b lineage-23.2 --depth 1 https://github.com/ryznstk/xiaomi_sm8635-modules.git kernel/xiaomi/sm8635-modules
+git clone -b lineage-23.2 --depth 1 https://github.com/LineageOS/android_kernel_xiaomi_sm8635-modules.git kernel/xiaomi/sm8635-modules
 
 rm -rf kernel/xiaomi/sm8635-devicetrees
-git clone -b lineage-23.2 --depth 1 https://github.com/ryznstk/xiaomi_sm8635-devicetrees.git kernel/xiaomi/sm8635-devicetrees
-
-cd kernel/xiaomi/sm8635
-curl https://raw.githubusercontent.com/maxsteeel/nomount/refs/heads/dev/kernel/setup.sh | bash -
-croot
-
-cd kernel/xiaomi/sm8635
-curl -LSs "https://raw.githubusercontent.com/ReSukiSU/ReSukiSU/main/kernel/setup.sh" | bash
-croot
+git clone -b lineage-23.2 --depth 1 https://github.com/LineageOS/android_kernel_xiaomi_sm8635-devicetrees.git kernel/xiaomi/sm8635-devicetrees
 
 # Hardware xiaomi (fresh clone)
 echo "Cloning hardware xiaomi source..."
@@ -72,12 +64,12 @@ git clone https://github.com/ryznstk/android_packages_apps_NotGameTurbo.git pack
 rm -rf vendor/lineage-priv
 
 # Refresh signing keys
-if [ -d vendor/evolution-priv/keys ]; then
+if [ -d vendor/voltage-priv/keys ]; then
   echo "Removing existing signing keys..."
-  rm -rf vendor/evolution-priv/keys
+  rm -rf vendor/voltage-priv/keys
 fi
 echo "Cloningfresh signing keys..."
-git clone -b main https://github.com/ryznstk/keys.git vendor/evolution-priv/keys
+git clone -b main https://github.com/ryznstk/keys.git vendor/voltage-priv/keys
 
 # Always back to root at the end
 if command -v croot &>/dev/null; then

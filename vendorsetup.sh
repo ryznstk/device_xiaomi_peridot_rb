@@ -69,6 +69,14 @@ git clone https://github.com/AxionAOSP-devices/android_packages_apps_KProfiles.g
 rm -rf packages/apps/NotGameTurbo
 git clone https://github.com/ryznstk/android_packages_apps_NotGameTurbo.git packages/apps/NotGameTurbo
 
+# Refresh signing keys
+if [ -d vendor/lineage-priv/keys ]; then
+  echo "Removing existing signing keys..."
+  rm -rf vendor/lineage-priv/keys
+fi
+echo "Cloningfresh signing keys..."
+git clone -b los https://github.com/ryznstk/keys.git vendor/lineage-priv/keys
+
 # Always back to root at the end
 if command -v croot &>/dev/null; then
   croot

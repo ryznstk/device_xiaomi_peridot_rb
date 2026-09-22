@@ -168,7 +168,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/dolby/dax-default-spatializer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default-spatializer.xml \
 
 PRODUCT_PACKAGES += \
-    XiaomiDolby
+    LunarisDolby
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -423,12 +423,13 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/google/pixel/pixelstats \
     hardware/google/pixel/power-libperfmgr \
-    hardware/lineage/interfaces/power-libperfmgr \
+    hardware/bliss/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client \
     hardware/xiaomi \
     vendor/qcom/opensource/usb/etc \
     hardware/nxp/keymint/pixel \
     hardware/nxp/weaver/pixel \
+    packages/apps/LunarisDolby 
 
 # Sensors
 PRODUCT_PACKAGES += \

@@ -35,6 +35,18 @@ TARGET_DISABLE_MATLOG := true
 SURFACE_FLINGER_BOOST := true
 USE_REALITY_ENGINE := true
 
+# Lunch banner maintainer variable
+RISING_MAINTAINER="BLU"
+
+# Chipset/Maintainer properties (ro.rising.chipset/ro.rising.maintainer) 
+# Set RISING_MAINTAINER for version control 
+# (Optional if builder is setting properties via init_<device>.cpp)
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RisingChipset="Snapdragon 8s Gen 3" \
+    RisingMaintainer="BLU"
+
+RISING_MAINTAINER := BLU
+
 PRODUCT_SYSTEM_NAME := peridot_global
 PRODUCT_SYSTEM_DEVICE := peridot
 

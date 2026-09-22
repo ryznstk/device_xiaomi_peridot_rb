@@ -61,6 +61,10 @@ git clone https://github.com/AxionAOSP-devices/android_packages_apps_KProfiles.g
 rm -rf packages/apps/NotGameTurbo
 git clone https://github.com/ryznstk/android_packages_apps_NotGameTurbo.git packages/apps/NotGameTurbo
 
+rm -rf packages/apps/LunarisDolby
+rm -rf packages/apps/DolbyAtmos
+git clone https://github.com/unmoved21/packages_apps_LunarisDolby.git packages/apps/LunarisDolby
+
 # Refresh signing keys
 if [ -d vendor/lineage-priv/keys ]; then
   echo "Removing existing signing keys..."

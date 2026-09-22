@@ -45,8 +45,8 @@ git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages
 rm -rf packages/apps/TouchServices
 git clone https://github.com/ryznstk/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
 
-rm -rf packages/apps/KProfiles
-git clone https://github.com/AxionAOSP-devices/android_packages_apps_KProfiles.git packages/apps/KProfiles
+#rm -rf packages/apps/KProfiles
+#git clone https://github.com/AxionAOSP-devices/android_packages_apps_KProfiles.git packages/apps/KProfiles
 
 #cd vendor/lineage
 #git fetch https://github.com/CipherOS/android_vendor_cipher seventeen
@@ -65,15 +65,13 @@ rm -rf packages/apps/LunarisDolby
 rm -rf packages/apps/DolbyAtmos
 git clone https://github.com/unmoved21/packages_apps_LunarisDolby.git packages/apps/LunarisDolby
 
-rm -rf vendor/lineage-priv
-
 # Refresh signing keys
-if [ -d vendor/evolution-priv/keys ]; then
+if [ -d vendor/lineage-priv/keys ]; then
   echo "Removing existing signing keys..."
-  rm -rf vendor/evolution-priv/keys
+  rm -rf vendor/lineage-priv/keys
 fi
 echo "Cloningfresh signing keys..."
-git clone -b evo https://github.com/ryznstk/keys.git vendor/evolution-priv/keys
+git clone -b line https://github.com/ryznstk/keys.git vendor/lineage-priv/keys
 
 # Always back to root at the end
 if command -v croot &>/dev/null; then

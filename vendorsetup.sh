@@ -27,7 +27,7 @@ croot
 # Hardware xiaomi (fresh clone)
 echo "Cloning hardware xiaomi source..."
 rm -rf hardware/xiaomi
-git clone -b los https://github.com/ryznstk/hardware_xiaomi_los.git hardware/xiaomi
+git clone -b ll https://github.com/ryznstk/hardware_xiaomi_los.git hardware/xiaomi
 
 # MiuiCamera device tree (fresh clone)
 echo "Cloning MiuiCamera device tree..."
@@ -52,6 +52,10 @@ git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages
 
 rm -rf packages/apps/TouchServices
 git clone https://github.com/ryznstk/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
+
+rm -rf packages/apps/LunarisDolby
+rm -rf packages/apps/DolbyAtmos
+git clone https://github.com/unmoved21/packages_apps_LunarisDolby.git packages/apps/LunarisDolby
 
 #cd vendor/lineage
 #git fetch https://github.com/CipherOS/android_vendor_cipher seventeen

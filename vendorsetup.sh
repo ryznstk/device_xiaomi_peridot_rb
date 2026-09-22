@@ -76,7 +76,7 @@ if [ -d vendor/lineage-priv/keys ]; then
   rm -rf vendor/lineage-priv/keys
 fi
 echo "Cloningfresh signing keys..."
-git clone -b line https://github.com/ryznstk/keys.git vendor/lineage-priv/keys
+git clone -b los https://github.com/ryznstk/keys.git vendor/lineage-priv/keys
 
 # Always back to root at the end
 if command -v croot &>/dev/null; then

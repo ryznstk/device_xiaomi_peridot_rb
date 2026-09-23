@@ -14,7 +14,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
 # Dalvik vm configs
-$(call inherit-product, frameworks/native/build/phone-xhdpi-12288-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # pKVM
 $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
@@ -168,7 +168,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/dolby/dax-default-spatializer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default-spatializer.xml \
 
 PRODUCT_PACKAGES += \
-    XiaomiDolby
+    LunarisDolby
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -429,6 +429,7 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/opensource/usb/etc \
     hardware/nxp/keymint/pixel \
     hardware/nxp/weaver/pixel \
+    packages/apps/LunarisDolby
 
 # Sensors
 PRODUCT_PACKAGES += \

@@ -45,18 +45,18 @@ git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages
 rm -rf packages/apps/TouchServices
 git clone https://github.com/ryznstk/packages_apps_TouchServices.git -b lineage-23.2 packages/apps/TouchServices
 
-rm -rf packages/apps/KProfiles
-git clone https://github.com/ryznstk/packages_apps_KProfiles.git packages/apps/KProfiles
+#rm -rf packages/apps/KProfiles
+#git clone https://github.com/ryznstk/packages_apps_KProfiles.git packages/apps/KProfiles
 
 #cd vendor/lineage
 #git fetch https://github.com/CipherOS/android_vendor_cipher seventeen
 #git cherry-pick a139ef86c1d00470092b3160e204dd247416eec5
 #croot
 
-cd build/soong
-git fetch https://github.com/ryznstk/inf_build_soong 17
-git reset --hard FETCH_HEAD
-croot
+#cd build/soong
+#git fetch https://github.com/ryznstk/inf_build_soong 17
+#git reset --hard FETCH_HEAD
+#croot
 
 cd system/sepolicy
 git fetch https://github.com/ryznstk/inf_system_sepolicy 17
@@ -65,7 +65,9 @@ croot
 rm -rf packages/apps/NotGameTurbo
 git clone https://github.com/ryznstk/android_packages_apps_NotGameTurbo.git packages/apps/NotGameTurbo
 
-rm -rf vendor/evolution-priv
+rm -rf packages/apps/LunarisDolby
+rm -rf packages/apps/DolbyAtmos
+git clone https://github.com/unmoved21/packages_apps_LunarisDolby.git packages/apps/LunarisDolby
 
 # Refresh signing keys
 if [ -d vendor/lineage-priv/keys ]; then
@@ -73,7 +75,7 @@ if [ -d vendor/lineage-priv/keys ]; then
   rm -rf vendor/lineage-priv/keys
 fi
 echo "Cloningfresh signing keys..."
-git clone -b line https://github.com/ryznstk/keys.git vendor/lineage-priv/keys
+git clone -b los https://github.com/ryznstk/keys.git vendor/lineage-priv/keys
 
 # Always back to root at the end
 if command -v croot &>/dev/null; then

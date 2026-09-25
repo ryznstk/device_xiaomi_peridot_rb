@@ -27,7 +27,7 @@ git clone -b lineage-23.2 --depth 1 https://github.com/LineageOS/android_kernel_
 # Hardware xiaomi (fresh clone)
 echo "Cloning hardware xiaomi source..."
 rm -rf hardware/xiaomi
-git clone -b los https://github.com/ryznstk/hardware_xiaomi_los.git hardware/xiaomi
+git clone -b ll https://github.com/ryznstk/hardware_xiaomi_los.git hardware/xiaomi
 
 # MiuiCamera device tree (fresh clone)
 echo "Cloning MiuiCamera device tree..."
@@ -69,15 +69,17 @@ git clone https://github.com/ryznstk/packages_apps_TouchServices.git -b lineage-
 rm -rf packages/apps/NotGameTurbo
 git clone https://github.com/ryznstk/android_packages_apps_NotGameTurbo.git packages/apps/NotGameTurbo
 
-rm -rf vendor/lineage-priv
+rm -rf packages/apps/LunarisDolby
+rm -rf packages/apps/DolbyAtmos
+git clone https://github.com/unmoved21/packages_apps_LunarisDolby.git packages/apps/LunarisDolby
 
 # Refresh signing keys
-if [ -d vendor/evolution-priv/keys ]; then
+if [ -d vendor/lineage-priv/keys ]; then
   echo "Removing existing signing keys..."
-  rm -rf vendor/evolution-priv/keys
+  rm -rf vendor/lineage-priv/keys
 fi
 echo "Cloningfresh signing keys..."
-git clone -b main https://github.com/ryznstk/keys.git vendor/evolution-priv/keys
+git clone -b los https://github.com/ryznstk/keys.git vendor/lineage-priv/keys
 
 # Always back to root at the end
 if command -v croot &>/dev/null; then

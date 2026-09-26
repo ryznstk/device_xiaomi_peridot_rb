@@ -27,7 +27,7 @@ croot
 # Hardware xiaomi (fresh clone)
 echo "Cloning hardware xiaomi source..."
 rm -rf hardware/xiaomi
-git clone -b los https://github.com/ryznstk/hardware_xiaomi_los.git hardware/xiaomi
+git clone -b ll https://github.com/ryznstk/hardware_xiaomi_los.git hardware/xiaomi
 
 # MiuiCamera device tree (fresh clone)
 echo "Cloning MiuiCamera device tree..."
@@ -65,6 +65,10 @@ git clone https://github.com/AxionAOSP-devices/android_packages_apps_KProfiles.g
 #git fetch https://github.com/ryznstk/android_build_soong cnb
 #git reset --hard FETCH_HEAD
 #croot
+
+rm -rf packages/apps/LunarisDolby
+rm -rf packages/apps/DolbyAtmos
+git clone https://github.com/unmoved21/packages_apps_LunarisDolby.git packages/apps/LunarisDolby
 
 rm -rf packages/apps/NotGameTurbo
 git clone https://github.com/ryznstk/android_packages_apps_NotGameTurbo.git packages/apps/NotGameTurbo

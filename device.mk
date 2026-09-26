@@ -429,6 +429,7 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/opensource/usb/etc \
     hardware/nxp/keymint/pixel \
     hardware/nxp/weaver/pixel \
+    packages/apps/LunarisDolby 
 
 # Sensors
 PRODUCT_PACKAGES += \
